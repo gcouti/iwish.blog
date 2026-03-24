@@ -19,10 +19,14 @@ author:
   github_username: seu_usuario
 
 # Configurações de Build
-theme: minima # O GitHub Pages já vem com o tema 'minima' instalado por padrão
+# theme: minima # O GitHub Pages já vem com o tema 'minima' instalado por padrão
+remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme 
+
+  
 
 # Configurações de Markdown
 markdown: kramdown
