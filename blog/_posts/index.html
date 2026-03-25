@@ -1,0 +1,118 @@
+---
+layout: default
+title: Blog iWish Gifts
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --nord-dark: #2e3440;
+            --nord-light: #eceff4;
+            --nord-accent: #88c0d0;
+            --text-main: #4c566a;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--nord-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid #d8dee9;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--nord-dark);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .post-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .post-date {
+            font-size: 0.85rem;
+            color: #a3be8c;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .post-title {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--nord-dark);
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .post-title:hover {
+            color: var(--nord-accent);
+        }
+
+        .post-excerpt {
+            font-size: 1rem;
+            color: #4c566a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>iWish Gifts</h1>
+            <p>Ajudando a encontrar os melhores presentes</p>
+        </header>
+
+        <main>
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <li class="post-item">
+                    <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span>
+                    <a class="post-title" href="{{ post.url | relative_url }}">
+                        {{ post.title }}
+                    </a>
+                    <div class="post-excerpt">
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.8rem;">
+            &copy; {{ site.time | date: '%Y' }} — Desenvolvido com Jekyll
+        </footer>
+    </div>
+
+</body>
+</html>
