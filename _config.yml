@@ -1,22 +1,14 @@
-Para ativar as funcionalidades de blog no GitHub Pages usando o Jekyll (que transforma seus arquivos Markdown em páginas HTML automaticamente), você precisa de um arquivo chamado _config.yml na raiz do seu repositório.
-
-Aqui está um modelo funcional e bem comentado para você começar:
-YAML
-
-# Configurações Básicas do Site
-title: Meu Blog Pessoal
-email: seu-email@exemplo.com
+title: iWish Gifts Blog
+email: suporte@iwish.gifts
 description: >- # Descrição para SEO e redes sociais
-  Um espaço para compartilhar ideias sobre tecnologia, 
-  estilo de vida e projetos pessoais.
-baseurl: "" # O subcaminho do seu site, ex: /meu-blog (deixe vazio se for o site principal)
-url: "https://seu-usuario.github.io" # O endereço completo do seu site
+Aqui você saberá de tudo sobre como organizar e montar chás de bebe, chá de fralda, chá revelação
+baseurl: "" 
+url: "https://blog.iwish.gifts
 
 # Configurações do Autor
 author:
-  name: "Gabriel"
-  twitter_username: seu_twitter
-  github_username: seu_usuario
+  name: "iWish Gifts"
+  github_username: gcouti
 
 # Configurações de Build
 # theme: minima # O GitHub Pages já vem com o tema 'minima' instalado por padrão
@@ -25,8 +17,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-remote-theme 
-
-  
 
 # Configurações de Markdown
 markdown: kramdown
